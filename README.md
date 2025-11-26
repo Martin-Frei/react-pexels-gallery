@@ -1,70 +1,181 @@
-# Getting Started with Create React App
+# 🖼️ Pexels Gallery - Image Search Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive image gallery application built with React and the Pexels API. Search millions of high-quality photos with an intuitive interface and smooth user experience.
 
-## Available Scripts
+![Main Page](screenshot/main_page.png)
 
-In the project directory, you can run:
+## 🚀 Live Demo
 
-### `npm start`
+**[View Live Demo](#)** _(Link nach Deployment einfügen)_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🔍 **Smart Search** - Search through millions of high-quality images
+- 🎯 **Quick Filters** - Pre-defined category buttons for instant browsing
+- 📱 **Responsive Design** - Optimized for all screen sizes
+- ⚡ **Fast Loading** - Efficient API integration with loading states
+- 🎨 **Modern UI** - Clean interface with Tailwind CSS
+- 🖱️ **Smooth Interactions** - Hover effects and transitions
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** (Hooks: useState, useEffect, useRef)
+- **Tailwind CSS** - Utility-first styling
+- **Pexels API** - High-quality image source
+- **Async/Await** - Modern JavaScript patterns
 
-### `npm run build`
+## 📸 Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Main Gallery View
+![Main Page](screenshot/main_page.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Search Functionality
+![Germany Pictures](screenshot/germany_pictures.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Loading State
+![Loading](screenshot/loading_new_pictures.png)
 
-### `npm run eject`
+## 🎯 Key Concepts Demonstrated
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- ✅ **API Integration** - RESTful API calls with proper authentication
+- ✅ **State Management** - React Hooks (useState, useEffect, useRef)
+- ✅ **Async Operations** - Fetch API with error handling
+- ✅ **Form Handling** - Search input with validation
+- ✅ **Dynamic Rendering** - Category filters with map function
+- ✅ **Responsive Grid** - CSS Grid with Tailwind
+- ✅ **Loading States** - User feedback during data fetching
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Node.js (v14 or higher)
+- npm or yarn
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Martin-Frei/react-image-gallery.git
+   cd react-image-gallery
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-### Code Splitting
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Open your browser**
+   ```
+   http://localhost:3000
+   ```
 
-### Analyzing the Bundle Size
+## 🔧 Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The app uses the Pexels API. For production use, consider:
 
-### Making a Progressive Web App
+- Implementing a backend proxy to secure the API key
+- Using environment variables for configuration
+- Adding rate limiting to prevent API quota exhaustion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Note:** In a production environment, API keys should be stored securely using:
+- Backend proxy server (Node.js/Django)
+- Serverless functions (Netlify/Vercel)
+- Environment variables with server-side rendering
 
-### Advanced Configuration
+## 📦 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+react-image-gallery/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── App.js              # Main app component
+│   ├── PexelsGallery.jsx   # Gallery component with API logic
+│   ├── App.css             # Styling
+│   └── index.js            # Entry point
+├── screenshot/             # App screenshots
+├── package.json
+└── README.md
+```
 
-### Deployment
+## 🎨 Features in Detail
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Search Functionality
+- Real-time search with debouncing
+- Input validation
+- Clear search results
 
-### `npm run build` fails to minify
+### Category Filters
+Pre-defined categories for quick browsing:
+- People, Fruits, City, Animals
+- Cars, Buildings, Food
+- React, Python, Germany
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Image Grid
+- Responsive 4-column grid layout
+- Hover scale effects
+- Optimized image loading (medium resolution)
+- Clean card design with shadows
+
+## 🔄 API Integration
+
+Using the [Pexels API](https://www.pexels.com/api/) for:
+- Image search functionality
+- High-quality stock photos
+- 40 images per request
+- Authorization via API key
+
+## 🌱 Future Enhancements
+
+- [ ] Infinite scroll / pagination
+- [ ] Image modal/lightbox view
+- [ ] Favorites/liked images (localStorage)
+- [ ] Download functionality
+- [ ] Advanced filters (color, orientation, size)
+- [ ] Search history
+- [ ] Dark mode toggle
+- [ ] Backend proxy for API key security
+
+## 📚 What I Learned
+
+This project helped me practice:
+- Working with external REST APIs
+- Managing async operations in React
+- Implementing search and filter functionality
+- Creating responsive layouts with Tailwind CSS
+- Handling loading and error states
+- Using React refs for form controls
+
+## 🤝 Contributing
+
+This is a portfolio project, but suggestions and feedback are welcome!
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👨‍💻 Author
+
+**Martin Freimuth**
+- GitHub: [@Martin-Frei](https://github.com/Martin-Frei)
+- LinkedIn: [martin-freimuth](https://www.linkedin.com/in/martin-freimuth-089249359/)
+- Email: mat.frei@gmx.de
+
+## 🙏 Acknowledgments
+
+- [Pexels](https://www.pexels.com/) for providing the free API
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+- [React](https://reactjs.org/) for the awesome JavaScript library
+
+---
+
+**⭐ If you found this project helpful, please consider giving it a star!**
+
+*Built with ❤️ using React and Tailwind CSS*
