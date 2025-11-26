@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { createRoot } from "react-dom/client";
+
 
 function PexelsGallery() {
   const [images, setImages] = useState([]); // stored fetched images
@@ -30,12 +30,12 @@ function PexelsGallery() {
 
   useEffect(() => {
     fetchImages(query); // show us default images
-  }, []);
+  }, [query]);
 
   const handleSearch = (e) => {
     e.preventDefault();
     const text = searchRef.current.value.trim();
-    if (text.length == 0) return;
+    if (text.length === 0) return;
     setQuery(text);
     fetchImages(text);
   };

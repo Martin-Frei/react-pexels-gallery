@@ -6,7 +6,7 @@ A modern, responsive image gallery application built with React and the Pexels A
 
 ## 🚀 Live Demo
 
-**[View Live Demo](#)** _(Link nach Deployment einfügen)_
+**[View Live Demo](https://martin-frei.github.io/react-pexels-gallery)**
 
 ## ✨ Features
 
@@ -56,8 +56,8 @@ A modern, responsive image gallery application built with React and the Pexels A
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Martin-Frei/react-image-gallery.git
-   cd react-image-gallery
+   git clone https://github.com/Martin-Frei/react-pexels-gallery.git
+   cd react-pexels-gallery
    ```
 
 2. **Install dependencies**
@@ -91,7 +91,7 @@ The app uses the Pexels API. For production use, consider:
 ## 📦 Project Structure
 
 ```
-react-image-gallery/
+react-pexels-gallery/
 ├── public/
 │   ├── index.html
 │   └── favicon.ico
