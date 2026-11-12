@@ -6,7 +6,8 @@ function PexelsGallery() {
   const [query, setQuery] = useState("nature"); // default topic
   const [loading, setLoading] = useState(false); // control page loading
   const searchRef = useRef(); // control input search
-  const API_KEY = "V8QBEoC4HJhVS6WmCGHt2TEuvL1P3OHZrNAX4sFV0sZW80yqkEZJGqlZ";
+  // The key comes from .env (see .env.example) and is never committed.
+  const API_KEY = process.env.REACT_APP_PEXELS_API_KEY;
 
   //Function wich fetch images
   const fetchImages = async (search) => {
@@ -21,7 +22,7 @@ function PexelsGallery() {
         }
       );
       const data = await response.json();
-      setImages(data.photos);
+      setImages(data.photos || []);
     } catch (err) {
       console.log("Error", err);
     }
@@ -62,6 +63,12 @@ function PexelsGallery() {
       <div className="flex justify-center gap-5 mb-10 flex-wrap">
         {['People', 'Fruits', 'City', 'Animals', 'Cars', 'Buildings', 'Food', 'React', 'Python','Germany'].map((cat)=>(<button key={cat} className="px-4 py-2 bg-blue-300 rounded-lg font-semibold hover:bg-blue-500" onClick={() =>handleFilter(cat.toLowerCase())}>{cat}</button>))}
       </div>
+
+      {!API_KEY && (
+        <p className="text-center mb-6 text-red-600">
+          No Pexels API key found. Copy .env.example to .env and add your key.
+        </p>
+      )}
 
       {loading && <p className="text-center mb-6"> Loading</p>}
 
