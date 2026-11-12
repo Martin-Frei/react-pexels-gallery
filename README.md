@@ -1,8 +1,14 @@
 # 🖼️ Pexels Gallery - Image Search Application
 
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white)
+![Pexels API](https://img.shields.io/badge/Pexels-API-05A081?logo=pexels&logoColor=white)
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://martin-frei.github.io/react-pexels-gallery/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A modern, responsive image gallery application built with React and the Pexels API. Search millions of high-quality photos with an intuitive interface and smooth user experience.
 
-![Main Page](screenshot/main_page.png)
+![Main Page](screenshot/main_page.jpg)
 
 ## 🚀 Live Demo
 
@@ -27,13 +33,13 @@ A modern, responsive image gallery application built with React and the Pexels A
 ## 📸 Screenshots
 
 ### Main Gallery View
-![Main Page](screenshot/main_page.png)
+![Main Page](screenshot/main_page.jpg)
 
 ### Search Functionality
-![Germany Pictures](screenshot/germany_pictures.png)
+![Germany Pictures](screenshot/germany_pictures.jpg)
 
 ### Loading State
-![Loading](screenshot/loading_new_pictures.png)
+![Loading](screenshot/loading_new_pictures.jpg)
 
 ## 🎯 Key Concepts Demonstrated
 
