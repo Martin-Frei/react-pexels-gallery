@@ -1,8 +1,14 @@
 # 🖼️ Pexels Gallery - Image Search Application
 
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white)
+![Pexels API](https://img.shields.io/badge/Pexels-API-05A081?logo=pexels&logoColor=white)
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://martin-frei.github.io/react-pexels-gallery/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 A modern, responsive image gallery application built with React and the Pexels API. Search millions of high-quality photos with an intuitive interface and smooth user experience.
 
-![Main Page](screenshot/main_page.png)
+![Main Page](screenshot/main_page.jpg)
 
 ## 🚀 Live Demo
 
@@ -27,13 +33,13 @@ A modern, responsive image gallery application built with React and the Pexels A
 ## 📸 Screenshots
 
 ### Main Gallery View
-![Main Page](screenshot/main_page.png)
+![Main Page](screenshot/main_page.jpg)
 
 ### Search Functionality
-![Germany Pictures](screenshot/germany_pictures.png)
+![Germany Pictures](screenshot/germany_pictures.jpg)
 
 ### Loading State
-![Loading](screenshot/loading_new_pictures.png)
+![Loading](screenshot/loading_new_pictures.jpg)
 
 ## 🎯 Key Concepts Demonstrated
 
@@ -65,28 +71,40 @@ A modern, responsive image gallery application built with React and the Pexels A
    npm install
    ```
 
-3. **Start the development server**
+3. **Add your Pexels API key** (see [Configuration](#-configuration))
+   ```bash
+   cp .env.example .env
+   ```
+
+4. **Start the development server**
    ```bash
    npm start
    ```
 
-4. **Open your browser**
+5. **Open your browser**
    ```
    http://localhost:3000
    ```
 
 ## 🔧 Configuration
 
-The app uses the Pexels API. For production use, consider:
+The app needs a free [Pexels API key](https://www.pexels.com/api/).
 
-- Implementing a backend proxy to secure the API key
-- Using environment variables for configuration
-- Adding rate limiting to prevent API quota exhaustion
+1. Copy the example file:
+   ```bash
+   cp .env.example .env
+   ```
+2. Insert your key in `.env`:
+   ```
+   REACT_APP_PEXELS_API_KEY=your_pexels_api_key_here
+   ```
+3. Restart `npm start` – Create React App reads `.env` only at startup.
 
-**Note:** In a production environment, API keys should be stored securely using:
+`.env` is listed in `.gitignore` and must never be committed.
+
+**Note:** This is a frontend-only app. The key is embedded in the JavaScript bundle at build time and is visible to anyone who opens the deployed site. For a real production app, keep the key on a server instead:
 - Backend proxy server (Node.js/Django)
 - Serverless functions (Netlify/Vercel)
-- Environment variables with server-side rendering
 
 ## 📦 Project Structure
 
